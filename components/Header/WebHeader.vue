@@ -63,7 +63,17 @@
                     <el-col :span="4">
                          <ul class="all_products_items">
                    
-                            <li>Buddha Statue </li>
+                            <li>Buddha Statue   
+                                
+                                <div class="buddha_status_data">
+                                    <ul>
+                                        <li>Hello world</li>
+                                        <li>Hello world</li>
+                                        <li>Hello world</li>
+                                        <li>Hello world</li>
+                                    </ul>
+                                </div>
+                            </li>
                             <li>Temple Supplies</li>
                             <li>Crafts & Ornaments</li>
                             <li>Incense Appliance</li>
@@ -78,6 +88,10 @@
                         </ul>
                     </el-col>
                     <el-col :span="16">
+                          
+                        
+                    
+                   
                          <div class="slideshow_imgs">
                            
                             <el-carousel height="366px">
@@ -177,11 +191,13 @@ export default {
     text-overflow: ellipsis;
     color:#F3F3F3;
     margin:0;
+    cursor: pointer;
 }
 .slider_bg {
     background-color: #C0A68E;
 }
 .slider_right_img img {
+    width:100%;
     height: 366px;
 }
  .el-carousel__item h3 {
@@ -217,5 +233,35 @@ export default {
  .el-input-group>.el-input__inner::-webkit-input-placeholder {
    color: #999999;
    font-size: 11px;
+}
+.buddha_status_data {
+    width:65%;
+    height:100%;
+    position: absolute;
+    background: #fff;
+    opacity: .9;
+    z-index: 99;
+    display: none;
+    top:0;
+    right:0;
+    left:0;
+    
+}
+.buddha_status_data li {
+    list-style: none;
+    background: unset;
+    border:0;
+    color:#000;
+}
+
+.all_products_items li:first-child:hover     {
+    background: #fff; 
+    color:#000;
+    font-weight: bold;
+    transition:ease-in-out .3s;
+}
+.all_products_items li:first-child:hover .buddha_status_data   {
+    display: block;
+    transition:ease-in-out .3s;
 }
 </style>
