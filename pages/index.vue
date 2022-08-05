@@ -9,8 +9,6 @@
 import Vue from "vue";
 import axios from "axios";
 import ItemList from "~/components/item/itemlist.vue";
-import WebFooter from "~/components/Footer/WebFooter.vue";
-import Itemlist from '../components/item/itemlist.vue';
 
 
 export default {
